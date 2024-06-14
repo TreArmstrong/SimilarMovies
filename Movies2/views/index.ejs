@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Similar Movies</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css"> 
+</head>
+<body>
+    <h1>Get Similar Movies</h1>
+    <form action="/get-similar-movies" method="GET">
+        <label for="movieTitle">Enter Movie Title:</label>
+        <input type="text" id="movieTitle" name="movieTitle" placeholder="Movie Title">
+
+        <label for="movieId">Enter Movie ID:</label>
+        <input type="text" id="movieId" name="movieId" placeholder="Movie ID">
+
+        <button type="submit">Get Similar Movies</button>
+    </form>
+
+    <div id="similarMovies">
+        <ul>
+            <% data.forEach(movie => { %>
+                <li>
+                    <h2><%= movie.title %></h2>
+                    <p>Release Date: <%= movie.release_date %></p>
+                    <p>Vote Average: <%= movie.vote_average %></p>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    
+    <script src="/script.js"></script> 
+</body>
+</html>

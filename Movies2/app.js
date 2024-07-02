@@ -18,7 +18,7 @@ const apiKey = process.env.API_KEY; // Access API key from environment variable
 const app = express();
 const port = 3000;
 
-
+// main change
 
 // Set the view engine and views directory
 app.set('view engine', 'ejs');

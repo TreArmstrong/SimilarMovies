@@ -13,6 +13,7 @@ let fetch; // importing node-fetch
     }
 })();
 
+//Dev practice 
 const apiKey = process.env.API_KEY; // Access API key from environment variable
 
 const app = express();
